@@ -61,13 +61,13 @@ For this lab, I concentrated on these audit-related compliance checks to strengt
 
 <img src="https://i.imgur.com/6HlHyzu.png">
 
-**What is WN10-CC-000327?**
+**What is WN10-CC-000327?**<br>
 It’s a security rule that requires PowerShell Transcription to be enabled on Windows 10 systems.
 
-**Why remediate?**
+**Why remediate?**<br>
 Without PowerShell Transcription enabled, there’s no detailed record of the commands and scripts executed in PowerShell. This makes it harder to identify configuration errors, troubleshoot problems, or investigate security breaches. Enabling transcription ensures a comprehensive audit trail is kept, which can reveal suspicious or malicious activity — especially if malware uses PowerShell to run harmful commands.
 
-**Real-world example:**
+**Real-world example:**<br>
 PowerShell is often exploited by attackers to run scripts stealthily. In many cyberattacks, detailed logs from PowerShell Transcription have been crucial in uncovering how malware operated on a compromised system. Without these logs, it’s much harder to detect and analyse such attacks, delaying response and increasing damage.
 
 **This compliance control applies to the following key frameworks:**
@@ -105,13 +105,13 @@ After running another compliance scan, I confirmed that WN10-00-000090 has been 
 
 <img src="https://i.imgur.com/IK948gB.png">
 
-**What is WN10-AU-000082?**
+**What is WN10-AU-000082?**<br>
 It’s a security rule that requires Windows 10 systems to audit Object Access - File Share successes.
 
-**Why remediate?**
+**Why remediate?**<br>
 Without this audit setting enabled, there’s no visibility into who is accessing file shares on the system. This makes it difficult to spot unauthorised access, detect lateral movement by attackers, or investigate data exfiltration. Enabling this setting ensures that successful file share access attempts are logged, providing a useful audit trail for both security and troubleshooting purposes.
 
-**Real-world example:**
+**Real-world example:**<br>
 Attackers often move between systems by accessing administrative shares like C$. If auditing for file share access isn’t enabled, this activity can go completely unnoticed. In real incidents, these logs have helped trace how attackers accessed sensitive folders or transferred stolen data across the network. Having this logging in place makes it much easier to detect and investigate unauthorised file access.
 
 **This compliance control applies to the following key frameworks:**
@@ -148,13 +148,13 @@ After running another compliance scan, I confirmed that WN10-AU-000082 has been 
 
 <img src="https://i.imgur.com/QfcxuDV.png">
 
-**What is WN10-AU-000560?**
+**What is WN10-AU-000560?**<br>
 It’s a security rule that says: “Windows 10 must be configured to audit Other Logon/Logoff Event successes.”
 
-**Why remediate?**
+**Why remediate?**<br>
 Without this setting, important logon-related events may go unrecorded, making it harder to detect unauthorised access or investigate suspicious activity. Enabling auditing for these events ensures better visibility into user sessions and system behaviour, helping identify patterns that could indicate misuse or compromise.
 
-**Real-world example:**
+**Real-world example:**<br>
 In many real-world incidents, attackers gain access through valid credentials and operate under the radar. By auditing other logon/logoff events—such as remote logons or network logoffs—security teams can spot unusual activity, like logons outside business hours or from unexpected locations. These logs are critical for threat hunting and post-incident analysis.
 
 **This compliance control applies to the following key frameworks:**
